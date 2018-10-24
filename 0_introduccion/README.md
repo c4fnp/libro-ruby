@@ -2,9 +2,9 @@
 
 ## Qué es Ruby?
 
-Ruby es un lenguaje de programación dinámico, interpretado, con una grandes facilidades para hacer
-metaprogramación y orientado a objetos aunque tambieén puede ser fácilmente usado para hacer
-programacioón funcional o imperativa.
+Ruby es un lenguaje de programación dinámico, interpretado, con grandes facilidades para hacer
+metaprogramación y orientado a objetos aunque también puede ser usado para hacer programacioón
+funcional o imperativa.
 
 Fue creado por el japonés Yukihiro Matsumoto inspirado en en Perl y SmallTalk entre otros con los
 principales objetivos de crear un lenguaje expresivo y que maximizara la felicidad del programador.
@@ -30,6 +30,7 @@ expresivos y así hacer que el código sea muy cercano al inglés como lo puedes
 
 ```(ruby)
 "Ruby\nBook".each_line(&:downcase)
+
 [1,2,3,4].find_all(&:even?)
 ```
 
@@ -42,9 +43,26 @@ Como buen programador debes conocer las ventajas y las desventajas de las herram
 - Al ser un lenguaje dinámico, interpretado y con una amplia librería estándar, Ruby es útil para
   hacer scripts. Ejemplo:
 
-  <!-- TODO: ejemplo de script -->
-
   ```(ruby)
+  # Script usado para calcular el porcentaje de commits de los últimos 1000
+  # que modificaron un archivo `.gradle`
+
+  def get_changed_files(git_ref)
+    `git diff-tree --no-commit-id --name-only -r #{git_ref}`.split("\n")
+  end
+
+  def get_changes_arr(n_commits, globs)
+    (0...n_commits).map(&:to_i).reverse.map do |i|
+      get_changed_files("HEAD~#{i}").any? { |file| globs.any? { |glob| File.fnmatch(glob, file) } }
+    end
+  end
+
+  n_commits = 1000
+  changes = get_changes_arr(n_commits, [
+    "*.gradle",
+  ])
+  changes_count = changes.count { |x| x == true }
+  puts "#{changes_count.to_f/n_commits.to_f}"
   ```
 
 - La gran cantidad de gemas desarrolladas por la comunidad hace que sea muy fácil crear programas
@@ -64,6 +82,10 @@ Como buen programador debes conocer las ventajas y las desventajas de las herram
   en dispositivos con muy pocos recursos, o puedes inclusive usar Ruby para hacer scripting dentro
   de otras plataformas, o usarlo para desarrollar aplicaciones móviles con Ruby Motion o integrarte
   con Java usando JRuby.
+
+- También puedes hacer extensiones nativas usando C/C++ o inclusive Rust. Estas extensiones nativas
+  pueden ser útiles cuando debes interactuar con componentes nativos del sistema o cuando el
+  desempeño de tu aplicación es muy importante.
 
 ### Desventajas
 
