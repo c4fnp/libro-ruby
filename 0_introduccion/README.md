@@ -11,14 +11,13 @@ principales objetivos de crear un lenguaje expresivo y que maximizara la felicid
 Aunque la primera versión fue publicada en 1993, sólamente se popularizó después del 2005 cuando
 comenzó a ser usado para desarrollar aplicaciones web gracias al framework de desarrollo web Ruby on
 Rails. Desde entonces la cantidad de desarrolladores usando Ruby a incrementado a pasos agigantados
-año a año convirtiendolo en uno de los lenguajes de programación más populares de la historia
+año a año convirtiendose en uno de los lenguajes de programación más populares de la historia
 reciente.
 
 Cuando escribes Ruby algunas veces vas a encontrar que puede llegar a parecerse al inglés, por
-ejemplo:
-
-A diferencia de otros lenguajes en donde debes escribir primero el condicional y después la acción,
-en Ruby puedes escribirlo al revés si consideras que de esta manera el código va a ser más legible.
+ejemplo, a diferencia de otros lenguajes en donde debes escribir primero el condicional y después la
+acción, en Ruby puedes escribirlo al revés si consideras que de esta manera el código va a ser más
+legible.
 
 ```(ruby)
 puts "Hello" if 4.is_a? Integer
@@ -26,7 +25,8 @@ puts "Hello" if 4.is_a? Integer
 
 La expresividad de Ruby depende casi que por completo de sus creadores y de los desarrolladores de
 librerías o gemas. La comunidad de desarrolladores de Ruby intenta usar nombres de métodos que sean
-expresivos y así hacer que el código sea muy cercano al inglés como lo puedes en estos ejemplos.
+expresivos y así hacer que el código sea muy cercano al inglés como lo puedes ver en los siguientes
+ejemplos.
 
 ```(ruby)
 "Ruby\nBook".each_line(&:downcase)
@@ -41,7 +41,8 @@ Como buen programador debes conocer las ventajas y las desventajas de las herram
 ### Ventajas
 
 - Al ser un lenguaje dinámico, interpretado y con una amplia librería estándar, Ruby es útil para
-  hacer scripts. Ejemplo:
+  hacer scripts. Por ejemplo, a continuación puedes ver un script que usé para encontrar el
+  porcentaje de commits que modificaban cierto tipo de archivos en un repositorio.
 
   ```(ruby)
   # Script usado para calcular el porcentaje de commits de los últimos 1000
@@ -98,7 +99,7 @@ Como buen programador debes conocer las ventajas y las desventajas de las herram
 - Al ser un lenguaje intepretado y que requiere un Garbage collector o en español "recolector de
   basura", el desempeño de Ruby depende completamente del interprete. Actualmente todos los
   interpretes requieren un consumo de memoria y de poder de computo considerablemente mayor al de
-  otros lenguajes no interpretados lo que hace que Ruby no sea la mejor opcioón para aplicaciones de
+  otros lenguajes no interpretados lo que hace que Ruby no sea la mejor opción para aplicaciones de
   alto desempeño como video juegos en 3D, machine learning, etc.
 
 - MRI o CRuby, el interprete más popular de Ruby, usa un mecanismo llamado "Global Interpreter Lock"
@@ -106,10 +107,10 @@ Como buen programador debes conocer las ventajas y las desventajas de las herram
 
 ### Ventaja o desventaja?
 
-- A diferencia de otros lenguajes populares como Python, Java, C# o Javascript que cuentan con
-  gigantes como Google, Oracle o Microsoft, Ruby no cuenta con una gran empresa que soporte su
-  desarrollo. Aunque por un lado eso significa que no tiene tantos recursos, por otro lado esto
-  significa que la comunidad es la que determina su futuro.
+- A diferencia de otros lenguajes populares como Python, Java, C# o Javascript que cuentan con el
+  apoyo de gigantes como Google, Oracle o Microsoft, Ruby no cuenta con el apoyo de una gran empresa
+  para su desarrollo. Aunque por un lado eso significa que no tiene tantos recursos, por otro lado
+  esto significa que la comunidad es la que determina su futuro.
 
 ## Quién está usando Ruby y para qué se está usando?
 
