@@ -2,7 +2,11 @@
 
 ## Bienvenid@
 
-En este libro vas a encontrar una introducción al lenguaje de programación Ruby desde 0.
+Este libro fue escrito para el curso de Ruby ofrecido por [PLatzi](https://platzi.com). Aunque el
+libro es autocontenido y por si solo constituye una guía básica para empezar a programar con Ruby,
+en el curso de Platzi vas a encontrar contenido adicional como videos en donde vamos a profundizar
+más sobre algunos temas, tutoriales extra y adicionalmente y más importante, vas a encontrar apoyo
+de la comunidad de estudiantes y profesores de Platzi.
 
 ## A quién está dirigido este libro?
 
@@ -46,4 +50,9 @@ provecho te recomiendo hacer todos los ejericios prácticos y retos propuestos e
 secciones. Los contenidos de este libro son código abierto así que te invito a proponer mejoras o
 reportar errores usando el sistema de Pull Request de Github.
 
-Simón Soriano [@simon0191](http://github.com/simon0191)
+---
+Simón Soriano
+
+[@simon0191](http://github.com/simon0191)
+
+Con el apoyo de [PLatzi](https://platzi.com)
