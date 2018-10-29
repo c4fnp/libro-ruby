@@ -1,0 +1,10 @@
+name 'rubyvmdeps'
+maintainer 'Simon Soriano'
+maintainer_email 'simon0191@gmail.com'
+license 'All Rights Reserved'
+description 'Installs/Configures rubydev'
+long_description 'Installs/Configures rubydev'
+version '0.1.0'
+chef_version '>= 13.0'
+
+depends 'ruby_rbenv'
