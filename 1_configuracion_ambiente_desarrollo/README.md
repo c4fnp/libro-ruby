@@ -35,8 +35,9 @@ Algo interesante es que vamos a utilizar dos herramientas hechas en Ruby:
 ## Creando la máquina virtual
 
 Antes de poder crear la máquina virtual vas a tener que instalar vagrant y virtual box. Puedes
-descargar vagrant en [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html) y Virtual Box en
-[https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
+descargar vagrant en
+[https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html) y Virtual Box
+en [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html).
 
 Una vez hayas instalado vagrant y virtualbox sigue estos pasos:
 
@@ -63,10 +64,10 @@ Una vez hayas instalado vagrant y virtualbox sigue estos pasos:
   ![Primera vez ejecutando la máquina virtual](/assets/starting_vm_first_time.gif)
 
   Este comando puede tardar varios minutos o inclusive horas dependiendo de tu conexión a internet
-  ya que Vagrant debe descargar varios archivos "pesados" como la imagen de la máquina
-  virtual, y adicionalmente, la primera vez que se ejecute la máquina virtual, Chef va a configurar
-  el ambiente con las dependencias necesarias lo que implica descargar e instalar Ruby lo cual es
-  otra operación que puede tardar varios minutos.
+  ya que Vagrant debe descargar varios archivos "pesados" como la imagen de la máquina virtual, y
+  adicionalmente, la primera vez que se ejecute la máquina virtual, Chef va a configurar el ambiente
+  con las dependencias necesarias lo que implica descargar e instalar Ruby lo cual es otra operación
+  que puede tardar varios minutos.
 
   ![Espera ...](/assets/wait.gif)
 
@@ -98,3 +99,5 @@ Ahora que la máquina virtual está lista, vamos a hacer un "Hello World":
   ```
 
 Felicitaciones! acabas de escribir tu primer programa en Ruby
+
+<!--TODO: Add an extra chapter explaining how to setup everything by yourlself -->
