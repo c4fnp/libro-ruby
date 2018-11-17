@@ -52,6 +52,7 @@ end
 (1..3).each { |x| puts x }
 ["x", "y", "z"].each { |x| puts x }
 ("a".."h").each { |x| puts x }
+4.times { |x| puts "#{x}" }
 ```
 
 Puedes encontrar más ejemplos en
