@@ -6,10 +6,105 @@ Como ya lo habrás notado, todo en Ruby es un objeto. Esto puede ser confirmado 
 
 ## Clases y métodos
 
-Para definir una clase en Ruby se utiliza `class` seguido del nombre de la clase y dentro de la misma se definen los métodos pertenecientes a la clase.
+Para definir una clase en Ruby se utiliza la palabra reservada `class` seguido del nombre de la clase. Para terminar la definición de una clase (y en general de un bloque) se utiliza la palabra reservada `end`. Dentro del bloque de la clase se definen los métodos de instancia usando `def` y los métodos de clase usando `def self.`.
+
+- initializer
+- métodos de clase
+- Struct
+- métodos de instancia
+- atributos de instancia
+- atributos de clase
+- attr_accessor, attr_reader, attr_writer
+- Todas las expresiones en Ruby retornan un valor. 
+- Si dentro de un bloque no se usa un `return` explícitamente, se retorna el resultado de la última expresión evaluada.
 
 ```(ruby)
-class 
+class Persona
+
+  def initializer(nombre)
+    @nombre = nombre
+  end
+
+  def nombre=(nombre)
+    @nombre = nombre
+  end
+
+  def nombre
+    @nombre
+  end
+
+  def self.sugerencias_de_nombre
+    ["Pepe", "Pepito", "Sutano", "Sutanito"]
+  end
+end
+
+Persona.sugerencias_de_nombre
+matz = Persona.new("Matz")
+matz.nombre
+matz.nombre = "Matzumoto"
+matz.nombre
+
+# con attr_accessor
+
+class Mascota
+  attr_accessor :nombre, :edad
+  def initializer(nombre, edad)
+    @nombre = nombre
+    @edad = edad
+  end
+
+  def self.sugerencias_de_nombre
+    ["Pepe", "Pepito", "Sutano", "Sutanito"]
+  end
+end
+
+Mascota.methods - Class.methods
+Mascota.new.methods
+Mascota.new.methods - Object.new.methods
+Mascota.sugerencias_de_nombre
+milo = Mascota.new("Milo", 3)
+milo.nombre
+milo.edad = 14
+milo.edad
+
+# con Struct
+Empleado = Struct.new(:nombre, :edad) do
+  def self.sugerencias_de_nombre
+    ["Pepe", "Pepito", "Sutano", "Sutanito"]
+  end
+end
+
+Empleado.methods
+Empleado.new.methods
+Empleado.new.methods - Object.new.methods
+pepe = Empleado.new
 ```
 
 ## Modulos
+
+Una buena práctica de programación es modularizar nuestro código, lo que algunos llaman "alta cohesión", lo que quiere decir que cada componente de nuestro código debe tener una responsabilidad bien definida. Una forma de agrupar componentes es usando Modulos.
+
+Por ejemplo en Ruby on Rails, cada componente está encapsulado en un módulo.
+
+```
+Module Model
+  class Company
+  end
+  class Employee
+  end
+end
+
+Module Reports
+  class ExcelReporter
+    def build
+      puts "Generating excel report"
+    end
+  end
+
+  class EmailReporter
+  end
+end
+
+excel_report = Reports::ExcelReporter.new
+excel_report.build
+```
