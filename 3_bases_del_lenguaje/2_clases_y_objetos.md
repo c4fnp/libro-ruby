@@ -8,16 +8,6 @@ Como ya lo habrás notado, todo en Ruby es un objeto. Esto puede ser confirmado 
 
 Para definir una clase en Ruby se utiliza la palabra reservada `class` seguido del nombre de la clase. Para terminar la definición de una clase (y en general de un bloque) se utiliza la palabra reservada `end`. Dentro del bloque de la clase se definen los métodos de instancia usando `def` y los métodos de clase usando `def self.`.
 
-- initializer
-- métodos de clase
-- Struct
-- métodos de instancia
-- atributos de instancia
-- atributos de clase
-- attr_accessor, attr_reader, attr_writer
-- Todas las expresiones en Ruby retornan un valor. 
-- Si dentro de un bloque no se usa un `return` explícitamente, se retorna el resultado de la última expresión evaluada.
-
 ```(ruby)
 class Persona
 
@@ -79,6 +69,17 @@ Empleado.new.methods
 Empleado.new.methods - Object.new.methods
 pepe = Empleado.new
 ```
+
+Lo que aprendimos:
+
+- El método `initializer` es el equivalente al constructor en otros lenguajes. Se usa para inicializar un objeto.
+- Los métodos de clase se definen usando `def self.<nombre del método>`
+- `Struct` es una clase especial de Ruby que nos permite crear rápidamente otras clases con attributos.
+- Los métodos de instancia se definen con `def <nombre del método>`y se puede usar `=` dentro de su nombre. Realmente cualquier método puede usar `=` en su nombre, pero por convención se utiliza para "setters".
+- Se pueden definir atributos de instancia usando `@` o el macro `attr_accessor` que adicionalmente crea "getters" y "setters"
+- Aparte del macro `attr_accessor` se puede usar los macros `attr_reader` y `attr_writer` para definir únicamente "getters" o "setters" respectivamente.
+- Se pueden definir atributos de clase usando `@@`
+- Todas las expresiones en Ruby retornan un valor. Si dentro de un bloque no se usa un `return` explícitamente, se retorna el resultado de la última expresión evaluada.
 
 ## Modulos
 
